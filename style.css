@@ -170,3 +170,50 @@
 .fa-envelope:hover{
     color:lightcoral;
 }
+
+
+.Work-Experience-1{
+    max-width:1300px;
+    margin: 0 auto;          
+    padding: 30px 30px;         
+    box-sizing: border-box;
+    border-color: black;
+    background-color:white;   
+    border: 2px solid lightgray;         
+    border-radius: 8px;                 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-top:20px;
+}
+
+.Work-Experience-1.p{
+    margin-top: auto;
+}
+
+.Work-Experience-2{
+    max-width:1300px;
+    margin: 0 auto;          
+    padding: 30px 30px;         
+    box-sizing: border-box;
+    border-color: black;
+    background-color:white;   
+    border: 2px solid lightgray;         
+    border-radius: 8px;                 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-top: 20px;
+}
+
+.Work-Experience-2.p{
+    margin-top:100px;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:20px;
+}
+
+.duration{
+    font-weight: bold;
+    opacity: 60%;
+    text-align: center;
+}
