@@ -92,26 +92,31 @@
 
 @keyframes slide {
   /* Image 1 */
-  0%, 20% {
+  0%, 15% {
     transform: translateX(0);  
     animation-timing-function: ease-in-out;
   }
   /* Image 2 */
-  25%, 45% {
+  20%, 35% {
     transform: translateX(-100%); 
     animation-timing-function: ease-in-out;
   }
   /* Image 3 */
-  50%, 70% {
+  40%, 55% {
     transform: translateX(-200%); 
     animation-timing-function: ease-in-out;
   }
-  /* Duplicate Image 1 (Keeps it from jumping) */
-  75%, 98% {
+
+  60%, 75% {
     transform: translateX(-300%);
+    animation-timing-function: ease-in-out;
+  }
+
+  80%, 98% {
+    transform: translateX(-400%);
     animation-timing-function: step-end;
   }
-  /* Instant Invisible Reset */
+
   100% {
     transform: translateX(0);
   }
@@ -246,7 +251,7 @@
 }
 
 .Mosaic div{
-    background:pink;
+    background:white;
     min-height:120px;
     height:100%;
     padding:40px;
@@ -261,7 +266,7 @@
 }
 
 .Flipcard-Container{
-    grid-column: 1/6;
+    grid-column: 1/5;
     grid-row:1;
     perspective:10000px;
     padding: 0 !important; 
@@ -287,7 +292,6 @@
 }
 
 .frontofcard{
-    background-color: pink;
     display:flex;
     justify-content: center;
     align-items:center;
@@ -295,7 +299,6 @@
 }
 
 .backofcard{
-    background-color: black;
     display:flex;
     justify-content: center;
     align-items:center;
@@ -306,6 +309,9 @@
     transform:rotateY(180deg);
 }
 
+.Hobby{
+    grid-column: 5/6;
+}
 .Music{
     grid-column: 6/7;
 }
@@ -318,6 +324,14 @@
 .Running{
     grid-column: 3/5;
     grid-row:2/4;
+}
+
+#shoe, #earth, #rock{
+    width:210px;
+}
+
+#earth, #rock{
+    width:500px;
 }
 
 .Judo{
