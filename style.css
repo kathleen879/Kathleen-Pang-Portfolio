@@ -211,7 +211,7 @@
 
 /* css styling for work experience tab */
 
-.Work-Experience-1{
+.Work-Experience-1, .Education-1{
     max-width:1300px;
     margin: 0 auto;          
     padding: 30px 30px;         
@@ -224,11 +224,11 @@
     margin-top:20px;
 }
 
-.Work-Experience-1.p{
+.Work-Experience-1.p, .Education-1.p{
     margin-top: auto;
 }
 
-.Work-Experience-2{
+.Work-Experience-2, .Education-2{
     max-width:1300px;
     margin: 0 auto;          
     padding: 30px 30px;         
@@ -241,15 +241,15 @@
     margin-top: 20px;
 }
 
-.Work-Experience-2.p{
+.Work-Experience-2.p, .Education-2.p{
     margin-top:100px;
 }
 
-.Work-Experience-1, .Work-Experience-2{
+.Work-Experience-1, .Work-Experience-2, .Education-1, .Education-2{
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.Work-Experience-1:hover, .Work-Experience-2:hover{
+.Work-Experience-1:hover, .Work-Experience-2:hover, .Education-1:hover, .Education-2:hover{
     transform: translateY(-5px) scale(1.03); /* Lifts up 5px and expands 3% */
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Makes the shadow deeper */
 }
