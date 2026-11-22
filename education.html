@@ -4,40 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kathleen's Education</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/9365b38aae.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navigation-bar">
         <div class="logo">Kathleen Pang</div>
-        <ul class="links">
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <ul class="links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="" class = "active">Education</a></li>
-            <li><a href="workexperience.html">Work Experience</a></li>
+            <li><a href="education.html" class="active" aria-current="page">Education</a></li>
+            <li><a href="work-experience.html">Work Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="hobbies.html">Hobbies</a></li>
         </ul>
     </nav>
-    
-    <div class="Introduction">
-        <div class ="Text-Container">
-            <h1>Education</h1>
-        </div>
-    </div>
 
-        <div class="Education-1">
-        <div class = 'header'>
-            <h2>National University of Singapore </h2><p class = duration> 2023-2027 </p>
-        </div>
-        <p>Bachelor of Science with Honours in Data Science and Analytics</p>
-    </div>
+    <main>
+        <section class="introduction">
+            <div class="text-container">
+                <h1>Education</h1>
+            </div>
+        </section>
 
-    <div class="Education-2">
-        <div class="header">
-            <h2>Hwa Chong Institution </h2><p class = duration>2021-2022</p>
-        </div>
-        <p>GCE A level</p>
-    </div>
+        <section class="card">
+            <div class="card-header">
+                <h2>National University of Singapore</h2>
+                <p class="duration">2023-2027</p>
+            </div>
+            <p>Bachelor of Science with Honours in Data Science and Analytics</p>
+        </section>
 
+        <section class="card">
+            <div class="card-header">
+                <h2>Hwa Chong Institution</h2>
+                <p class="duration">2021-2022</p>
+            </div>
+            <p>GCE A level</p>
+        </section>
+    </main>
 </body>
 </html>

@@ -4,71 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kathleen's Hobbies</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/9365b38aae.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navigation-bar">
         <div class="logo">Kathleen Pang</div>
-        <ul class="links">
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <ul class="links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="education.html" >Education</a></li>
-            <li><a href="workexperience.html" >Work Experience</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="work-experience.html">Work Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
-            <li><a href="" class = "active">Hobbies</a></li>
+            <li><a href="hobbies.html" class="active" aria-current="page">Hobbies</a></li>
         </ul>
     </nav>
-    
-    <div class="Introduction" id="Hobbies-Introduction">
-        <div class="Mosaic">
-            <div class="Flipcard-Container">
-                <div class="Flipcard">
 
-                    <div class="frontofcard">
-                        <img id = "earth" src="earth.png">
+    <main>
+        <section class="introduction" id="hobbies-introduction">
+            <div class="mosaic">
+                <!-- Big tile that flips over on hover -->
+                <div class="flipcard-container">
+                    <div class="flipcard">
+                        <div class="front-of-card">
+                            <img class="hobby-img-earth" src="images/hobbies/earth.png" alt="Earth">
+                        </div>
+                        <div class="back-of-card">
+                            <img class="hobby-img-earth" src="images/hobbies/just-a-rock.png" alt="Just a rock.">
+                        </div>
                     </div>
+                </div>
 
-                    <div class="backofcard">
-                        <img id = "rock" src="earth (1).png">
-                    </div>
+                <div class="travel">
+                    <a href="https://kathleen879.github.io/kath.travels/"><img class="hobby-img-small" src="images/hobbies/plane.png" alt="Plane"></a>
+                </div>
 
+                <div class="video-editing">
+                    <img class="hobby-img-small" src="images/hobbies/video-editing.png" alt="Video Editing">
+                </div>
+
+                <div class="music">
+                    <img class="hobby-img-small" src="images/hobbies/guitar.png" alt="Guitar">
+                </div>
+
+                <div class="running">
+                    <img class="hobby-img-medium" src="images/hobbies/running-shoe.png" alt="Running Shoe">
+                </div>
+
+                <div class="judo">
+                    <img class="hobby-img-medium" src="images/hobbies/judo.png" alt="Judo Gi">
+                </div>
+
+                <div class="art">
+                    <img class="hobby-img-small" src="images/hobbies/paint.png" alt="Art Palette">
+                </div>
+
+                <div class="photography">
+                    <img class="hobby-img-small" src="images/hobbies/camera.png" alt="Photography">
+                </div>
+
+                <div class="cats">
+                    <img class="hobby-img-cats" src="images/hobbies/cats.png" alt="Cats">
                 </div>
             </div>
+        </section>
 
-            <div class="Travel">
-                <a href ="https://kathleen879.github.io/kath.travels/"><img src="Plane.png" id = "plane" alt="Plane"></a>
-            </div>
-
-            <div class="Video Editing">
-                <img src="Video Editing.png" id="video" alt="Video Editing">
-
-            <div class="Music">
-                <img src="Guitar.png" id = "guitar" alt="Guitar">
-            </div>
-
-            <div class="Running">
-                <img id = "shoe" src="Running Shoe.png" alt="Running Shoe">
-            </div>
-
-            <div class="Judo">
-                <img src="Judo.png" id = "judo" alt="Judo Gi">
-            </div>
-
-            <div class="Art">
-                <img src="Paint.png" id = "Paint" alt="Art Palette">
-            </div>
-
-            <div class="Photography">
-                <img src="Camera.png" id = "camera" alt="Photography">
-
-            </div>
-
-            <div class="Cats">
-                <img src="Cats.png" id = "cats" alt="Cats">
-            </div>
-
-        </div>
-    </div>
-    <p id="self-drawn">All illustrations personally drawn on Piskel.</p>
+        <p class="self-drawn">All illustrations personally drawn on Piskel.</p>
+    </main>
 </body>
 </html>
