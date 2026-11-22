@@ -235,7 +235,7 @@ body {
     text-align: center;
 }
 
-/* Card with a round photo on the left (LinkedIn style), used on the Education page */
+/* Card with a round photo on the left (LinkedIn style), used on the Education and Work Experience pages */
 .card-with-photo {
     display: flex;
     align-items: flex-start;
@@ -246,7 +246,7 @@ body {
     flex: 1; /* text takes up all the space next to the photo */
 }
 
-.institution-photo {
+.card-photo {
     width: 80px;
     height: 80px;
     flex-shrink: 0;           /* stops the circle being squashed by long text */
@@ -466,7 +466,7 @@ body {
         gap: 16px;
     }
 
-    .institution-photo {
+    .card-photo {
         width: 56px;
         height: 56px;
     }

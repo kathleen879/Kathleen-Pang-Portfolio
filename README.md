@@ -17,7 +17,8 @@ A personal portfolio website built with plain HTML and CSS.
 └── images/
     ├── photos/             Photos used in the home page slideshow
     ├── hobbies/            Pixel-art illustrations (drawn on Piskel)
-    └── education/          Round institution photos on the Education page
+    ├── education/          Round institution photos on the Education page
+    └── work/               Round company photos on the Work Experience page
 ```
 
 ## Conventions
@@ -26,4 +27,4 @@ A personal portfolio website built with plain HTML and CSS.
 - Colours and shadows are defined once as variables at the top of `css/style.css`.
 - Education and Work Experience entries share one `.card` style. To add a new entry, copy an existing `<section class="card">` block.
 - The site is mobile-friendly: sections 8 and 9 of `style.css` hold the laptop and small-screen (900px and below) rules, and there's a ☰ menu on phones.
-- Education photos: put the image in `images/education/` and change the `src` of that card's `<img class="institution-photo">`. Any shape works; it is cropped to a circle automatically.
+- Education and Work Experience photos: put the image in `images/education/` or `images/work/` and change the `src` of that card's `<img class="card-photo">`. Any shape works; it is cropped to a circle automatically.
