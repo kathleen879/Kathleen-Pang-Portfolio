@@ -4,51 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kathleen Pang's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/9365b38aae.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navigation-bar">
         <div class="logo">Kathleen Pang</div>
         <ul class="links">
-            <li><a href="" class = "active">Home</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
             <li><a href="education.html">Education</a></li>
-            <li><a href="workexperience.html">Work Experience</a></li>
+            <li><a href="work-experience.html">Work Experience</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="hobbies.html">Hobbies</a></li>
         </ul>
     </nav>
-    
-    <div class="Introduction">
-        <div class ="Text-Container">
-            <h1>Hi there, I am Kathleen.</h1>
-            <p>I am a final year Data Science and Analytics student at the National University of Singapore.</p>
 
-            <div class = "icons">
-                <a href="mailto:kathleenpangqiyu@gmail.com" target = "_blank" title="Send Email"><i class="fa-solid fa-envelope"></i></a>
-                <a href="https://github.com/kathleen879" target = "_blank" title="Github Profile"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/kathleenpangqiyu" target = "_blank"title="Linkedin Profile"><i class="fa-brands fa-linkedin"></i></a>
+    <main>
+        <section class="introduction">
+            <div class="text-container">
+                <h1>Hi there, I am Kathleen.</h1>
+                <p>I am a final year Data Science and Analytics student at the National University of Singapore.</p>
+
+                <div class="icons">
+                    <a href="mailto:kathleenpangqiyu@gmail.com" target="_blank" rel="noopener" title="Send Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/kathleen879" target="_blank" rel="noopener" title="Github Profile"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kathleenpangqiyu" target="_blank" rel="noopener" title="Linkedin Profile"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
             </div>
 
-        </div>
-
-        <div class="Image-Container">
-            <div class="Slider-Wrapper">
-                <div class="slider">
-                    <img id="slide1" src="Kathleen Photo.jpg">
-                    <img id = "slide2" src="Image 1.jpg"> 
-                    <img id="slide3" src="Image 3.jpg"> 
-                    <img id="slide4" src="Image 2.jpg">  
-                    <img id="slide5" src = "Kathleen Photo.jpg">
-                </div>  
+            <div class="image-container">
+                <div class="slider-wrapper">
+                    <!-- The first photo is repeated at the end so the loop restarts seamlessly -->
+                    <div class="slider">
+                        <img src="images/photos/kathleen.jpg" alt="Photo of Kathleen">
+                        <img src="images/photos/photo-1.jpg" alt="Photo of Kathleen">
+                        <img src="images/photos/photo-3.jpg" alt="Photo of Kathleen">
+                        <img src="images/photos/photo-2.jpg" alt="Photo of Kathleen">
+                        <img src="images/photos/kathleen.jpg" alt="" aria-hidden="true">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="About">
-        <h1>About me</h1>
-        <p>I think there is beauty in translating raw, messy data into functional digital products.</p>
-
-    </div>
+        <section class="about">
+            <h1>About me</h1>
+            <p>I think there is beauty in translating raw, messy data into functional digital products.</p>
+        </section>
+    </main>
 </body>
 </html>

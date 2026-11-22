@@ -1,0 +1,324 @@
+/* ==========================================================================
+   Kathleen Pang's Portfolio - Stylesheet
+   --------------------------------------------------------------------------
+   1. Colours (variables)
+   2. Base / reset
+   3. Navigation bar          (all pages)
+   4. Page introduction       (all pages)
+   5. Home page               (index.html)
+   6. Cards                   (education.html, work-experience.html)
+   7. Hobbies page            (hobbies.html)
+   ========================================================================== */
+
+
+/* 1. Colours
+   Change a colour here and it updates everywhere it is used. */
+:root {
+    --colour-primary: lightcoral;
+    --colour-primary-dark: coral;
+    --colour-accent: lightgray;
+    --colour-card: white;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* 2. Base / reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* 3. Navigation bar */
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--colour-primary);
+    padding: 0 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* keeps the bar above the page while scrolling */
+}
+
+.logo {
+    color: white;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+.links li {
+    height: 100%;
+}
+
+.navigation-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 4px solid transparent;
+    transition: background-color 0.3s ease;
+}
+
+.navigation-bar a:hover,
+.navigation-bar a.active {
+    background-color: var(--colour-primary-dark);
+    border-bottom: 4px solid var(--colour-accent);
+}
+
+
+/* 4. Page introduction (the title area under the nav bar) */
+.introduction {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    gap: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 150px 50px 0;
+}
+
+.introduction h1 {
+    margin-bottom: 10px;
+}
+
+.introduction p {
+    margin-bottom: 50px;
+}
+
+
+/* 5. Home page */
+
+/* Social icons */
+.icons {
+    font-size: 25px;
+}
+
+.fa-envelope { color: darkgrey; }
+.fa-github   { color: purple; }
+.fa-linkedin { color: darkblue; }
+
+.fa-envelope:hover,
+.fa-github:hover,
+.fa-linkedin:hover {
+    color: var(--colour-primary);
+}
+
+/* Photo slideshow */
+.image-container {
+    flex: 1;
+    width: 100%;
+    max-width: 350px;
+    max-height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    object-position: center 10%;
+    animation: slide 15s infinite linear;
+}
+
+/* Each photo shows for ~15% of the cycle, then slides left.
+   The 5th image is a copy of the 1st so the jump back to the start is invisible. */
+@keyframes slide {
+    0%, 15% {
+        transform: translateX(0);
+        animation-timing-function: ease-in-out;
+    }
+    20%, 35% {
+        transform: translateX(-100%);
+        animation-timing-function: ease-in-out;
+    }
+    40%, 55% {
+        transform: translateX(-200%);
+        animation-timing-function: ease-in-out;
+    }
+    60%, 75% {
+        transform: translateX(-300%);
+        animation-timing-function: ease-in-out;
+    }
+    80%, 98% {
+        transform: translateX(-400%);
+        animation-timing-function: step-end;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* About section */
+.about {
+    margin: 200px 60px 0;
+}
+
+.about h1 {
+    margin-bottom: 10px;
+}
+
+.about p {
+    margin-bottom: 1000px; /* leaves scroll space below until more content is added */
+}
+
+
+/* 6. Cards (Education and Work Experience entries) */
+.card {
+    max-width: 1300px;
+    margin: 20px auto 0;
+    padding: 30px;
+    background-color: var(--colour-card);
+    border: 2px solid var(--colour-accent);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.03); /* lift up 5px and grow 3% */
+    box-shadow: var(--shadow-hover);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.duration {
+    font-weight: bold;
+    opacity: 60%;
+    text-align: center;
+}
+
+
+/* 7. Hobbies page */
+#hobbies-introduction {
+    display: block;
+    text-align: center;
+}
+
+/* 6-column x 3-row grid of hobby tiles */
+.mosaic {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Note: this styles EVERY div inside the mosaic, including the front and
+   back faces of the flip card, which is what gives them their card look. */
+.mosaic div {
+    background: var(--colour-card);
+    min-height: 120px;
+    height: 100%;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* Hover lift for every tile except the flip card */
+.mosaic > div:not(.flipcard-container) {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.mosaic > div:not(.flipcard-container):hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Where each tile sits in the grid  (columns 1-6, rows 1-3)
+   Row 1: [ flip card (1-4)          ][ video ][ music       ]
+   Row 2: [ travel (1-2) ][ running (3-4) ][ judo  ][ photography ]
+   Row 3: [ art (1-2)    ][ cats (3-6)                          ] */
+.flipcard-container { grid-column: 1 / 5; grid-row: 1; }
+.video-editing      { grid-column: 5 / 6; grid-row: 1; }
+.music              { grid-column: 6 / 7; grid-row: 1; }
+.travel             { grid-column: 1 / 3; grid-row: 2; }
+.running            { grid-column: 3 / 5; grid-row: 2; }
+.judo               { grid-column: 5 / 6; grid-row: 2; }
+.photography        { grid-column: 6 / 7; grid-row: 2; }
+.art                { grid-column: 1 / 3; grid-row: 3; }
+.cats               { grid-column: 3 / 7; grid-row: 3; }
+
+/* Flip card (Earth -> "just a rock") */
+.flipcard-container {
+    perspective: 10000px;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.flipcard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.4s;
+}
+
+.flipcard-container:hover .flipcard {
+    transform: rotateY(180deg);
+}
+
+.front-of-card,
+.back-of-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.front-of-card { transform: rotateY(0deg); }
+.back-of-card  { transform: rotateY(180deg); }
+
+/* Hobby illustration sizes */
+.hobby-img-small  { width: 210px; }
+.hobby-img-medium { width: 250px; }
+.hobby-img-earth  { width: 500px; }
+.hobby-img-cats   { width: 700px; }
+
+.self-drawn {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
