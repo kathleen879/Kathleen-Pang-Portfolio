@@ -37,6 +37,12 @@ body {
     background-color: white;
 }
 
+/* Safety net: an image can never be wider than the box it sits in,
+   so a large photo added later can't break the layout on phones */
+img {
+    max-width: 100%;
+}
+
 
 /* 3. Navigation bar */
 .navigation-bar {
@@ -235,6 +241,28 @@ body {
     text-align: center;
 }
 
+/* Card with a round photo on the left (LinkedIn style), used on the Education and Work Experience pages */
+.card-with-photo {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.card-body {
+    flex: 1; /* text takes up all the space next to the photo */
+}
+
+.card-photo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;           /* stops the circle being squashed by long text */
+    border-radius: 50%;       /* turns the square image into a circle */
+    object-fit: contain;      /* shows the whole logo, never cropped or stretched */
+    padding: 10px;            /* keeps the logo's corners inside the circle */
+    background-color: white;
+    border: 2px solid var(--colour-accent);
+}
+
 
 /* 7. Hobbies page */
 #hobbies-introduction {
@@ -328,6 +356,11 @@ body {
 .hobby-img-medium { width: 250px; }
 .hobby-img-earth  { width: 500px; }
 .hobby-img-cats   { width: 700px; }
+
+/* On wide screens the hobby illustrations keep their exact sizes above */
+.mosaic img {
+    max-width: none;
+}
 
 /* Below 1400px wide the sizes above no longer fit in the 6-column grid,
    so let each image shrink to fit inside its tile */
@@ -440,6 +473,16 @@ body {
 
     .duration {
         text-align: left;
+    }
+
+    .card-with-photo {
+        gap: 16px;
+    }
+
+    .card-photo {
+        width: 56px;
+        height: 56px;
+        padding: 7px;
     }
 
     /* Hobbies: 2 columns. Wide tiles span both columns. */
