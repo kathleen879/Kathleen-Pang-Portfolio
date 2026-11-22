@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kathleen's Work Experience</title>
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <script src="js/main.js?v=2" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <script src="js/main.js?v=3" defer></script>
     <script src="https://kit.fontawesome.com/9365b38aae.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,8 +28,9 @@
             </div>
         </section>
 
-        <!-- To use a real photo: put it in images/work/ and change the src below -->
-        <section class="card card-with-photo">
+        <!-- Each card is a link: clicking anywhere on it opens that blog post (the href below).
+             To change a logo, put it in images/photos/Institutions/ and change the src. -->
+        <a class="card card-with-photo card-link" href="work-nestle.html">
             <img class="card-photo" src="images/photos/Institutions/Nestle_Logo.png" alt="Nestle">
             <div class="card-body">
                 <div class="card-header">
@@ -42,9 +43,9 @@
                     routine tasks using Power Automate and created a duty roster app using Power Apps.
                 </p>
             </div>
-        </section>
+        </a>
 
-        <section class="card card-with-photo">
+        <a class="card card-with-photo card-link" href="work-fraser-and-neave.html">
             <img class="card-photo" src="images/photos/Institutions/FNN_Logo.png" alt="Fraser and Neave">
             <div class="card-body">
                 <div class="card-header">
@@ -56,7 +57,7 @@
                     coordinating with other departments to fulfil orders.
                 </p>
             </div>
-        </section>
+        </a>
     </main>
 </body>
 </html>
