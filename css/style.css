@@ -8,7 +8,8 @@
    5. Home page               (index.html)
    6. Cards                   (education.html, work-experience.html)
    7. Hobbies page            (hobbies.html)
-   8. Small screens           (phones and tablets, 900px wide or less)
+   8. Medium screens          (hobbies grid on laptops, 901px - 1399px)
+   9. Small screens           (phones and tablets, 900px wide or less)
    ========================================================================== */
 
 
@@ -344,7 +345,31 @@ body {
 }
 
 
-/* 8. Small screens
+/* 8. Medium screens (laptops and small desktops, 901px - 1399px wide)
+   Six columns get too narrow here, so the hobbies mosaic uses 3 columns:
+   Row 1: [ flip card (1-2)    ][ video       ]
+   Row 2: [ travel (1-2)       ][ music       ]
+   Row 3: [ running ][ judo    ][ photography ]
+   Row 4: [ art     ][ cats (2-3)             ] */
+@media (min-width: 901px) and (max-width: 1399px) {
+    .mosaic {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: none;
+    }
+
+    .mosaic > .flipcard-container { grid-column: 1 / 3; grid-row: 1; }
+    .mosaic > .video-editing      { grid-column: 3 / 4; grid-row: 1; }
+    .mosaic > .travel             { grid-column: 1 / 3; grid-row: 2; }
+    .mosaic > .music              { grid-column: 3 / 4; grid-row: 2; }
+    .mosaic > .running            { grid-column: 1 / 2; grid-row: 3; }
+    .mosaic > .judo               { grid-column: 2 / 3; grid-row: 3; }
+    .mosaic > .photography        { grid-column: 3 / 4; grid-row: 3; }
+    .mosaic > .art                { grid-column: 1 / 2; grid-row: 4; }
+    .mosaic > .cats               { grid-column: 2 / 4; grid-row: 4; }
+}
+
+
+/* 9. Small screens
    Everything above is the desktop design. The rules below only apply when
    the screen is 900px wide or less, and override the desktop rules. */
 @media (max-width: 900px) {
