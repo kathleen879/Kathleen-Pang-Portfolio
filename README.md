@@ -16,9 +16,8 @@ A personal portfolio website built with plain HTML and CSS.
 │   └── style.css           All styles, split into numbered sections
 └── images/
     ├── photos/             Photos used in the home page slideshow
+    │   └──  Institutions   Photos of Institution Logos used in Education and Working Experience
     ├── hobbies/            Pixel-art illustrations (drawn on Piskel)
-    ├── education/          Round institution photos on the Education page
-    └── work/               Round company photos on the Work Experience page
 ```
 
 ## Conventions
