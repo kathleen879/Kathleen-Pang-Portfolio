@@ -200,7 +200,7 @@ img {
 
 /* About section */
 .about {
-    margin: 200px 60px 0;
+    margin: 200px 60px 80px; /* 80px of space below the last paragraph */
 }
 
 .about h1 {
@@ -208,7 +208,8 @@ img {
 }
 
 .about p {
-    margin-bottom: 1000px; /* leaves scroll space below until more content is added */
+    margin-bottom: 16px; /* normal gap between paragraphs */
+    line-height: 1.7;
 }
 
 
@@ -542,7 +543,7 @@ img {
     }
 
     .about {
-        margin: 80px 20px 0;
+        margin: 80px 20px 60px;
     }
 
     /* Cards: put the dates under the title */
