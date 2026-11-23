@@ -212,6 +212,59 @@ img {
     line-height: 1.7;
 }
 
+/* Skills (under About me): groups side by side on big screens, stacked on
+   phones. auto-fit makes as many 260px+ columns as fit in the width. */
+.skills {
+    margin: 0 60px 80px;
+}
+
+.skills h1 {
+    margin-bottom: 20px;
+}
+
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.skill-group {
+    padding: 20px;
+    border: 2px solid var(--colour-accent);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.skill-group h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+/* Font Awesome replaces <i> with <svg>, so both are listed */
+.skill-group h2 i,
+.skill-group h2 svg {
+    color: var(--colour-primary-dark);
+}
+
+/* Each skill is a rounded tag; flex-wrap moves tags to the next line when full */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.skill-list li {
+    padding: 6px 14px;
+    border-radius: 999px;      /* fully rounded ends */
+    background-color: #fdeeee; /* very light version of the coral */
+    border: 1px solid var(--colour-primary);
+    font-size: 15px;
+}
+
 
 /* 6. Cards (Education and Work Experience entries) */
 .card {
@@ -682,6 +735,10 @@ body:has(dialog[open]) {
 
     .about {
         margin: 80px 20px 60px;
+    }
+
+    .skills {
+        margin: 0 20px 60px;
     }
 
     /* Cards: put the dates under the title */
