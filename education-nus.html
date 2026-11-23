@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What I learnt at the National University of Singapore</title>
-    <link rel="stylesheet" href="css/style.css?v=3">
-    <script src="js/main.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <script src="js/main.js?v=4" defer></script>
     <script src="https://kit.fontawesome.com/9365b38aae.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -44,7 +44,83 @@
             <p class="placeholder">I chose to study Data Science and Analytics because the Statistics that I learnt in Junior College intrigued me. 
                 Going into university, I walked into a new world of programming and code. Having no prior experience, the learning curve was steep and I struggled.
                 I slowly started to see the beauty in having the ability to transform numbers in a spreadsheet to valuable insights
-                that can guide decision making. In our world, data is king. <br><br>Relevant Modules: Linear Algebra, Advanced Calculus, Probability, Mathematical Statistics, Machine Learning, Convex Optimisation. <br>Skills learnt: R, Python, SQL. </p>
+                that can guide decision making. In our world, data is king. <br><br>Relevant Modules: Linear Algebra, Advanced Calculus, Probability, Mathematical Statistics, Machine Learning, Convex Optimisation. <br>Skills learnt: R, Python, SQL, PowerBI, Power Automate, PowerApps, Microsoft Suite. </p>
+
+            <!-- ASSIGNMENTS: each one has two parts that go together:
+                 1. a <button class="assignment-tile"> (the small icon card), and
+                 2. a <dialog> (the pop-up) whose id matches the button's data-dialog.
+                 To add one: copy both parts, give them a new matching id, then change the
+                 title, module, description and PDF file name (in BOTH data-src and href).
+                 Icons come from fontawesome.com/icons (free, solid), e.g. fa-chart-line. -->
+            <h3 class="assignments-heading">Assignments I am proud of</h3>
+            <div class="assignment-grid">
+                <button class="assignment-tile" type="button" data-dialog="major-1">
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                    <span class="assignment-title">Sample assignment title</span>
+                    <span class="assignment-module">Module name · CODE0000</span>
+                </button>
+                <button class="assignment-tile" type="button" data-dialog="major-2">
+                    <i class="fa-solid fa-brain" aria-hidden="true"></i>
+                    <span class="assignment-title">Sample assignment title</span>
+                    <span class="assignment-module">Module name · CODE0000</span>
+                </button>
+                <button class="assignment-tile" type="button" data-dialog="major-3">
+                    <i class="fa-solid fa-database" aria-hidden="true"></i>
+                    <span class="assignment-title">Sample assignment title</span>
+                    <span class="assignment-module">Module name · CODE0000</span>
+                </button>
+            </div>
+
+            <dialog class="assignment-dialog" id="major-1" aria-labelledby="major-1-title">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <div>
+                            <h3 id="major-1-title">Sample assignment title</h3>
+                            <p class="duration">Module name · CODE0000</p>
+                        </div>
+                        <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <p class="placeholder">2-3 sentences: what the task was, what you did, and what you are proud of.</p>
+                    <iframe class="dialog-pdf" data-src="documents/assignments/sample.pdf" title="Sample assignment title (PDF)"></iframe>
+                    <a class="pdf-button" href="documents/assignments/sample.pdf" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </dialog>
+
+            <dialog class="assignment-dialog" id="major-2" aria-labelledby="major-2-title">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <div>
+                            <h3 id="major-2-title">Sample assignment title</h3>
+                            <p class="duration">Module name · CODE0000</p>
+                        </div>
+                        <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <p class="placeholder">2-3 sentences: what the task was, what you did, and what you are proud of.</p>
+                    <iframe class="dialog-pdf" data-src="documents/assignments/sample.pdf" title="Sample assignment title (PDF)"></iframe>
+                    <a class="pdf-button" href="documents/assignments/sample.pdf" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </dialog>
+
+            <dialog class="assignment-dialog" id="major-3" aria-labelledby="major-3-title">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <div>
+                            <h3 id="major-3-title">Sample assignment title</h3>
+                            <p class="duration">Module name · CODE0000</p>
+                        </div>
+                        <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <p class="placeholder">2-3 sentences: what the task was, what you did, and what you are proud of.</p>
+                    <iframe class="dialog-pdf" data-src="documents/assignments/sample.pdf" title="Sample assignment title (PDF)"></iframe>
+                    <a class="pdf-button" href="documents/assignments/sample.pdf" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </dialog>
         </section>
 
         <section>
@@ -53,6 +129,85 @@
             <p class="placeholder">As a proud Southeast Asian, I find joy and I see value in learning about Southeast Asian culture. Taking this minor has been super
                 enjoyable and I loved it. <br><br> Skills learnt: Basic Vietnamese, Basic Thai, Cross Cultural Understanding
             </p>
+
+            <h3 class="assignments-heading">Assignments I am proud of</h3>
+            <div class="assignment-grid">
+                <button class="assignment-tile" type="button" data-dialog="minor-1">
+                    <i class="fa-solid fa-earth-asia" aria-hidden="true"></i>
+                    <span class="assignment-title">Sample assignment title</span>
+                    <span class="assignment-module">Module name · CODE0000</span>
+                </button>
+            </div>
+
+            <dialog class="assignment-dialog" id="minor-1" aria-labelledby="minor-1-title">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <div>
+                            <h3 id="minor-1-title">Sample assignment title</h3>
+                            <p class="duration">Module name · CODE0000</p>
+                        </div>
+                        <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <p class="placeholder">2-3 sentences: what the task was, what you did, and what you are proud of.</p>
+                    <iframe class="dialog-pdf" data-src="documents/assignments/sample.pdf" title="Sample assignment title (PDF)"></iframe>
+                    <a class="pdf-button" href="documents/assignments/sample.pdf" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </dialog>
+        </section>
+
+        <section>
+            <h2>Common Curriculum</h2>
+            <p>Alongside my major and minor, every NUS student takes Common Curriculum courses outside their field of study.</p>
+            <p class="placeholder">Write a line or two about what these courses taught you.</p>
+            <h3 class="assignments-heading">Assignments I am proud of</h3>
+            <div class="assignment-grid">
+                <button class="assignment-tile" type="button" data-dialog="cc-1">
+                    <i class="fa-solid fa-venus-mars" aria-hidden="true"></i>
+                    <span class="assignment-title">Sample essay title</span>
+                    <span class="assignment-module">Sex and Gender · CODE0000</span>
+                </button>
+                <button class="assignment-tile" type="button" data-dialog="cc-2">
+                    <i class="fa-solid fa-person" aria-hidden="true"></i>
+                    <span class="assignment-title">Sample essay title</span>
+                    <span class="assignment-module">The Human Condition · CODE0000</span>
+                </button>
+            </div>
+
+            <dialog class="assignment-dialog" id="cc-1" aria-labelledby="cc-1-title">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <div>
+                            <h3 id="cc-1-title">Sample essay title</h3>
+                            <p class="duration">Sex and Gender · CODE0000</p>
+                        </div>
+                        <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <p class="placeholder">2-3 sentences: what the task was, what you did, and what you are proud of.</p>
+                    <iframe class="dialog-pdf" data-src="documents/assignments/sample.pdf" title="Sample essay title (PDF)"></iframe>
+                    <a class="pdf-button" href="documents/assignments/sample.pdf" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </dialog>
+
+            <dialog class="assignment-dialog" id="cc-2" aria-labelledby="cc-2-title">
+                <div class="dialog-content">
+                    <div class="dialog-header">
+                        <div>
+                            <h3 id="cc-2-title">Sample essay title</h3>
+                            <p class="duration">The Human Condition · CODE0000</p>
+                        </div>
+                        <button class="dialog-close" type="button" aria-label="Close">&times;</button>
+                    </div>
+                    <p class="placeholder">2-3 sentences: what the task was, what you did, and what you are proud of.</p>
+                    <iframe class="dialog-pdf" data-src="documents/assignments/sample.pdf" title="Sample essay title (PDF)"></iframe>
+                    <a class="pdf-button" href="documents/assignments/sample.pdf" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF in new tab
+                    </a>
+                </div>
+            </dialog>
         </section>
 
         <section>
