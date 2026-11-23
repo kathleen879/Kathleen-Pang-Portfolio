@@ -340,6 +340,144 @@ img {
     padding-left: 24px;
 }
 
+/* Assignment tiles: a grid of small icon cards. auto-fill fits as many
+   150px+ columns as there is room for, so it reflows on any screen size. */
+.assignments-heading {
+    margin: 24px 0 12px;
+}
+
+.assignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.assignment-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 12px;
+    background-color: var(--colour-card);
+    border: 2px solid var(--colour-accent);
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: center;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.assignment-tile:hover {
+    transform: translateY(-4px);
+    border-color: var(--colour-primary);
+    box-shadow: var(--shadow);
+}
+
+.assignment-tile:focus-visible,
+.dialog-close:focus-visible,
+.pdf-button:focus-visible {
+    outline: 3px solid var(--colour-primary-dark);
+    outline-offset: 3px;
+}
+
+/* Font Awesome replaces <i> with <svg>, so both are listed */
+.assignment-tile i,
+.assignment-tile svg {
+    font-size: 28px;
+    color: var(--colour-primary-dark);
+}
+
+.assignment-title {
+    font-weight: bold;
+}
+
+.assignment-module {
+    font-size: 13px;
+    opacity: 60%;
+}
+
+/* Assignment pop-up (<dialog>) */
+.assignment-dialog {
+    width: min(900px, calc(100% - 32px));  /* 900px wide, or the screen minus 16px each side */
+    max-height: calc(100vh - 64px);
+    margin: auto;                           /* centres it on screen */
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow-hover);
+}
+
+/* The page behind the pop-up: darkened slightly and blurred */
+.assignment-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+}
+
+/* Stop the page behind from scrolling while a pop-up is open */
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+.dialog-content {
+    padding: 24px 28px;
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.dialog-header .duration {
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.dialog-close {
+    background: none;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    padding: 0 6px;
+    cursor: pointer;
+    color: gray;
+}
+
+.dialog-close:hover {
+    color: black;
+}
+
+.dialog-pdf {
+    display: block;
+    width: 100%;
+    height: 60vh;
+    margin-bottom: 16px;
+    border: 2px solid var(--colour-accent);
+    border-radius: 8px;
+}
+
+.pdf-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: var(--colour-primary);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+    background-color: var(--colour-primary-dark);
+}
+
 /* Grey prompt text to replace with your own writing */
 .placeholder {
     color: gray;
@@ -582,6 +720,21 @@ img {
 
     .post-header h1 {
         font-size: 1.5em;
+    }
+
+    /* Assignments: 2 tiles per row; the pop-up shows the "Open PDF" button
+       instead of the PDF, because phone browsers can't show PDFs inside a page */
+    .assignment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .dialog-content {
+        padding: 20px;
+    }
+
+    .dialog-pdf {
+        display: none;
     }
 
     /* Hobbies: 2 columns. Wide tiles span both columns. */
